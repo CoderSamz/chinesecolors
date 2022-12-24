@@ -13,9 +13,20 @@
 .btn {
     margin: auto;
     display: inline-block;
-    float: right;
     position: fixed;
-    right: 0;
+    right: 10px;
+    top: 10px;
+}
+
+div .gzh {
+    margin: auto;
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 25%;
+    min-width: 150px;
+    max-width: 600px;
 }
 
 div .coloritem {
