@@ -6,7 +6,7 @@
 
 .container {
     display: inline-block;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
   
@@ -40,6 +40,7 @@ div .coloritem {
     border: 1px solid black;
     border-radius: 30px;
     text-align: center;
+    padding: 15px 10px;
 }
 
 #toastImg {
