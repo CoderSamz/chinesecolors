@@ -9,8 +9,8 @@ $.getJSON('./assets/chinesecolors-utf8.json', function(json) {
         var hex = json[index].hex;
         changeBGColor(hex)
         colorName = json[index].name
-        console.log(index)
-        console.log(json[index])
+        // console.log(index)
+        // console.log(json[index])
     });
 });
 var colorHexG = ""
