@@ -24,16 +24,22 @@ div .gzh {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    width: 25%;
-    min-width: 150px;
-    max-width: 600px;
+    width: 15%;
+    min-width: 120px;
+    max-width: 300px;
+}
+
+div .colorslist {
+    margin-top: 10px;
 }
 
 div .coloritem {
-    height: auto;
+    height: 100%;
+    width: 100%;
     word-wrap: break-word;
     border: 1px solid black;
-    border-radius: 2%;
+    border-radius: 30px;
+    text-align: center;
 }
 
 #toastImg {

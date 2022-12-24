@@ -1,17 +1,11 @@
-// fetch('./chinesecolors-utf8.json')
-//     .then((response) => response.json())
-//     .then((json) => console.log(json))
 $.getJSON('./assets/chinesecolors-utf8.json', function(json) {
 
-    // json.forEach(color => {
-    //     $('#colors').prepend("<li><span class='name'>" + color.name + "</span><span class='pinyin'>" + color.pinyin + "</span><span class='rgb'>" + color.RGB + "</span></li>")
-    // });
     for (let index = 0; index < json.length; index++) {
         const element = json[index];
-        $('#colors').append("<div class='coloritem col' style='background-color: " + element.hex + ";'><span class='name'>" + element.name + "</span><br><span class='pinyin'>" + element.pinyin + "</span><br><span class='rgb'>RGB: " + element.RGB + "</span><br><span class='hex'>十六进制: " + element.hex + "</span><br><span class='CMYK'>CMYK: " + element.CMYK + "</span></div>")
+        $('#colors').append("<div class='coloritem col' style='background-color: " + element.hex + ";'><span class='name'>" + index + '.' + element.name + "</span><br><span class='pinyin'>" + element.pinyin + "</span><br><span class='rgb'>RGB: " + element.RGB + "</span><br><span class='hex'>十六进制: " + element.hex + "</span><br><span class='CMYK'>CMYK: " + element.CMYK + "</span></div><br>")
     }
     $("div .coloritem").on("click", function(event) {
-        var index = $(this).index();
+        var index = $("div .coloritem").index(this);
         var hex = json[index].hex;
         changeBGColor(hex)
         colorName = json[index].name
@@ -22,8 +16,7 @@ $.getJSON('./assets/chinesecolors-utf8.json', function(json) {
 var colorHexG = ""
 var colorName = ""
 function changeBGColor(colorHex) {
-    colorHex.replace("#")
-    console.log(colorHex)
+    // console.log(colorHex)
     colorHexG = colorHex
     $('.background').css("background", colorHex);
 }
