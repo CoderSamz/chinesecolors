@@ -80,6 +80,7 @@ function toastImg() {
     var imgData = canvas.toDataURL(type);
     var image = new Image();
     image.src = imgData;
+    image.style.width = "100%";
     $("div .canvasImg").append(image);
     $("#toastImg").css("display","block");
 }
